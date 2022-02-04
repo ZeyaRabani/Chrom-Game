@@ -1,4 +1,5 @@
 import { updateGround, setupGround } from "./ground.js"
+import { updateDino, setupDino } from "./dino.js"
 
 const WORLD_WIDTH = 200
 const WORLD_HEIGHT = 60
@@ -24,9 +25,10 @@ function update(time) {
         return
     }
     const delta = time - lastTime
-    console.log(delta)
+    //console.log(delta)
 
     updateGround(delta, speedScale)
+    updateDino(delta, speedScale)
     updateSpeedScale(delta)
     updateScore(delta)
 
